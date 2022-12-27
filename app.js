@@ -5,14 +5,19 @@ const weatherApi={
     baseUrl: "https://api.openweathermap.org/data/2.5/weather?"
 }
 const searchInputBox=document.getElementById('input-box');
-searchInputBox.addEventListener('keypress', (event)=>{
-    if(event.keyCode==13){
-        console.log(searchInputBox.value);
-        getWeatherReport(searchInputBox.value);
-        document.querySelector('.weather-body').style.display='block';
-    }
+// searchInputBox.addEventListener('keypress', (event)=>{
+//     if(event.keyCode==13){
+//         console.log(searchInputBox.value);
+//         getWeatherReport(searchInputBox.value);
+//         document.querySelector('.weather-body').style.display='block';
+//     }
     
-});
+// });
+function show(){
+    console.log(searchInputBox.value);
+    getWeatherReport(searchInputBox.value);
+    document.querySelector('.weather-body').style.display='block';
+}
 
 //Get Weather Report
 function getWeatherReport(city){
@@ -66,3 +71,5 @@ function dateManage(dateArgs){
     let day=days[dateArgs.getDay()];
     return `${date} ${month} (${day}), ${year}`;
 }
+
+//button

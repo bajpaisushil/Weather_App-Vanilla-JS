@@ -61,3 +61,10 @@ body{
     font-size: 1.5rem;
     font-weight: 600;
 }
+.button{
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: blueviolet;
+    padding: 5px;
+    border-radius: 45%;
+}
